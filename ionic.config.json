@@ -1,0 +1,8 @@
+{
+  "name": "CINOI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "2f78a3c5"
+}
