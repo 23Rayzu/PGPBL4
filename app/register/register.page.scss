@@ -1,0 +1,53 @@
+/* Background gradient ala desain modern */
+.login-bg {
+  --background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container center */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Card styling */
+ion-card {
+  width: 360px;
+  border-radius: 16px;
+  background: rgba(20, 20, 20, 0.9); /* transparan elegan */
+  backdrop-filter: blur(10px); /* efek glassmorphism */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ion-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Link tambahan */
+.extra-links {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;   /* posisi horizontal center */
+  align-items: center;       /* posisi vertical center */
+  font-size: 14px;
+}
+
+.extra-links a {
+  color: #4da6ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+  color: #66b3ff;
+}
+

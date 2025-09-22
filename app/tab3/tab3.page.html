@@ -1,0 +1,168 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ionic Component</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Badge Components -->
+  <h2>Badge Components</h2>
+  <ion-item>
+    <ion-badge slot="start" color="primary">11</ion-badge>
+    <ion-label>Badge in start slot</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Badge in end slot</ion-label>
+    <ion-badge slot="end" color="primary">22</ion-badge>
+  </ion-item>
+
+  <!-- Breadcrumbs Components -->
+  <h2>Breadcrumbs Components</h2>
+  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-size: 16px;">
+    <span>Home</span> / <span>Electronics</span> / <span>Cameras</span> / <strong>Film</strong>
+  </div>
+
+  <!-- Button Components -->
+  <h2 style="margin-top: 24px;">Button Components</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4"><ion-button expand="block" color="medium">DEFAULT</ion-button></ion-col>
+      <ion-col size="4"><ion-button expand="block" color="primary">PRIMARY</ion-button></ion-col>
+      <ion-col size="4"><ion-button expand="block" color="secondary">SECONDARY</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4"><ion-button expand="block" color="tertiary">TERTIARY</ion-button></ion-col>
+      <ion-col size="4"><ion-button expand="block" color="success">SUCCESS</ion-button></ion-col>
+      <ion-col size="4"><ion-button expand="block" color="warning">WARNING</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4"><ion-button expand="block" color="danger">DANGER</ion-button></ion-col>
+      <ion-col size="4"><ion-button expand="block" color="light">LIGHT</ion-button></ion-col>
+      <ion-col size="4"><ion-button expand="block" color="dark">DARK</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4"><ion-button expand="block" fill="clear">CLEAR</ion-button></ion-col>
+      <ion-col size="4"><ion-button expand="block" fill="outline">OUTLINE</ion-button></ion-col>
+      <ion-col size="4">
+        <ion-button expand="block" fill="solid">
+          <ion-icon name="settings" slot="start"></ion-icon>
+          SOLID
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block">
+          <ion-icon name="settings" slot="start"></ion-icon>
+          LEFT ICON
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block">
+          RIGHT ICON
+          <ion-icon name="heart" slot="end"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block">
+          <ion-icon name="heart" slot="start"></ion-icon>
+          LEFT ICON
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block">
+          RIGHT ICON
+          <ion-icon name="heart" slot="end"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Card Components -->
+  <h2 style="margin-top: 24px;">Card Component</h2>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Contoh Card</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Ini adalah contoh konten dari sebuah <strong>Ion Card</strong>. Kamu bisa menambahkan teks,
+      tombol, gambar, dan lainnya di sini.
+    </ion-card-content>
+    <ion-button expand="block" fill="clear" color="primary">Lihat Detail</ion-button>
+  </ion-card>
+
+  <!-- Calendar Components -->
+  <h2>Calendar Component</h2>
+  <ion-item>
+    <ion-label position="stacked">Pilih Tanggal</ion-label>
+    <ion-datetime
+      display-format="DD MMM YYYY"
+      placeholder="Select Date">
+    </ion-datetime>
+  </ion-item>
+
+  <!-- Input Components -->
+  <ion-text color="secondary">
+    <h2>Input Components</h2>
+  </ion-text>
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="Text input" placeholder="Enter text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Number input" type="number" placeholder="000"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Password input" type="password" value="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Email input" type="email" placeholder="email@domain.com"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Telephone input" type="tel" placeholder="888-888-8888"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Action Sheet Components -->
+  <ion-text color="secondary">
+    <h2>Action Sheet Components</h2>
+  </ion-text>
+
+  <ion-button id="open-action-sheet">Open</ion-button>
+
+  <ion-action-sheet
+    trigger="open-action-sheet"
+    header="Actions"
+    [buttons]="actionSheetButtons">
+  </ion-action-sheet>
+
+  <!-- FAB Utama -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+
+    <!-- FAB List (atas) -->
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="document-text"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="chatbubble-ellipses"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="globe"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <ion-title>Login Aplikasi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="login-bg">
+  <div class="login-container">
+    <ion-card>
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>Sign In</ion-card-title>
+        <ion-card-subtitle>Login to manage your account</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Email -->
+        <ion-item>
+          <ion-input label="Email" labelPlacement="floating" placeholder="Masukkan Email Anda" [(ngModel)]="email"
+            type="email">
+          </ion-input>
+        </ion-item>
+
+        <!-- Password -->
+        <ion-item class="ion-margin-top">
+          <ion-input [type]="showPassword ? 'text' : 'password'" label="Password" labelPlacement="floating"
+            placeholder="Masukkan password Anda" [(ngModel)]="password">
+          </ion-input>
+          <ion-icon slot="end" [name]="showPassword ? 'eye-off' : 'eye'" (click)="showPassword = !showPassword"
+            style="cursor: pointer; font-size: 20px;">
+          </ion-icon>
+        </ion-item>
+
+        <!-- Tombol Login -->
+        <ion-button class="ion-margin-top" expand="block" (click)="login()" [disabled]="!email || !password">
+          Sign In
+        </ion-button>
+
+        <div class="extra-links">
+          <a routerLink="/forgot-password">Forgot password?</a>
+          <a routerLink="/register">Sign up</a>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

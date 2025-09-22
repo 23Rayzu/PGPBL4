@@ -1,0 +1,52 @@
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <ion-title>Register Aplikasi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="login-bg">
+  <div class="login-container">
+    <ion-card>
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>Register</ion-card-title>
+        <ion-card-subtitle>Create a new account</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-input label="Email" labelPlacement="floating" placeholder="Masukkan Email Anda" [(ngModel)]="email"
+            type="email">
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-input [type]="showPassword ? 'text' : 'password'" label="Password" labelPlacement="floating"
+            placeholder="Masukkan password Anda" [(ngModel)]="password">
+          </ion-input>
+          <ion-icon slot="end" [name]="showPassword ? 'eye-off' : 'eye'" (click)="showPassword = !showPassword"
+            style="cursor: pointer; font-size: 20px;">
+          </ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-input [type]="showConfirmPassword ? 'text' : 'password'" label="Confirm Password"
+            labelPlacement="floating" placeholder="Konfirmasi password Anda" [(ngModel)]="confirmPassword">
+          </ion-input>
+          <ion-icon slot="end" [name]="showConfirmPassword ? 'eye-off' : 'eye'"
+            (click)="showConfirmPassword = !showConfirmPassword" style="cursor: pointer; font-size: 20px;">
+          </ion-icon>
+        </ion-item>
+
+        <ion-button class="ion-margin-top" expand="block" (click)="register()"
+          [disabled]="!email || !password || !confirmPassword">
+          Sign Up
+        </ion-button>
+
+        <!-- Tambahan link ke login -->
+        <div class="extra-links ion-text-center ion-margin-top">
+          <a routerLink="/login">Already have an account? Login</a>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
